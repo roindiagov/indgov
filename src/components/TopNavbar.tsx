@@ -6,11 +6,11 @@ import emblemLogo from "@/assets/emblem-logo.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Ministries", href: "/#ministries" },
+  { label: "Ministries", href: "/ministries" },
   { label: "Laws & Policies", href: "/laws-policies" },
   { label: "Recruitment", href: "/recruitment" },
-  { label: "Public Services", href: "/#services" },
-  { label: "News", href: "/#news" },
+  { label: "Public Services", href: "/public-services" },
+  { label: "News", href: "/news" },
 ];
 
 const TopNavbar = () => {
@@ -34,17 +34,11 @@ const TopNavbar = () => {
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
-              {navLinks.map((link) =>
-                link.href.startsWith("/#") ? (
-                  <a key={link.label} href={link.href} className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded transition-colors">
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link key={link.label} to={link.href} className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded transition-colors">
-                    {link.label}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link key={link.label} to={link.href} className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded transition-colors">
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
             <div className="hidden lg:flex items-center gap-2">
@@ -73,17 +67,11 @@ const TopNavbar = () => {
         {mobileOpen && (
           <div className="lg:hidden bg-card border-t">
             <div className="gov-section py-3 space-y-1">
-              {navLinks.map((link) =>
-                link.href.startsWith("/#") ? (
-                  <a key={link.label} href={link.href} className="block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded" onClick={() => setMobileOpen(false)}>
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link key={link.label} to={link.href} className="block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded" onClick={() => setMobileOpen(false)}>
-                    {link.label}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link key={link.label} to={link.href} className="block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded" onClick={() => setMobileOpen(false)}>
+                  {link.label}
+                </Link>
+              ))}
               {user && isAdmin ? (
                 <>
                   <Link to="/admin" className="block px-3 py-2 text-sm font-medium text-primary" onClick={() => setMobileOpen(false)}>Dashboard</Link>
