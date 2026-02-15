@@ -28,6 +28,9 @@ const Index = () => {
         <div className="gov-divider" />
         <AboutSection />
       </main>
+      <div className="bg-muted/50 border-t py-3 text-center text-xs text-muted-foreground">
+        <p>Disclaimer: This is a Roblox project and is not affiliated with any real-world government or organization.</p>
+      </div>
     </div>
   );
 };
