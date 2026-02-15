@@ -20,10 +20,10 @@ const Footer = () => {
           <div>
             <h5 className="font-semibold text-sm uppercase tracking-wider mb-3 text-primary-foreground/60">Quick Links</h5>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Sitemap</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">RTI Portal</a></li>
+              <li><a href="/news" className="hover:text-primary-foreground transition-colors">News</a></li>
+              <li><a href="/ministries" className="hover:text-primary-foreground transition-colors">Ministries</a></li>
+              <li><a href="/recruitment" className="hover:text-primary-foreground transition-colors">Recruitment</a></li>
+              <li><a href="/laws-policies" className="hover:text-primary-foreground transition-colors">Laws & Policies</a></li>
             </ul>
           </div>
 
@@ -31,10 +31,10 @@ const Footer = () => {
           <div>
             <h5 className="font-semibold text-sm uppercase tracking-wider mb-3 text-primary-foreground/60">Services</h5>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Citizen Portal</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Recruitment</a></li>
+              <li><a href="/public-services" className="hover:text-primary-foreground transition-colors">Public Services</a></li>
+              <li><a href="/recruitment" className="hover:text-primary-foreground transition-colors">Recruitment</a></li>
               <li><a href="/laws-policies" className="hover:text-primary-foreground transition-colors">Laws & Policies</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Grievance Redressal</a></li>
+              <li><a href="/search?q=" className="hover:text-primary-foreground transition-colors">Search Portal</a></li>
             </ul>
           </div>
 
