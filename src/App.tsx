@@ -10,6 +10,9 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import LawsPolicies from "./pages/LawsPolicies";
 import Recruitment from "./pages/Recruitment";
+import News from "./pages/News";
+import PublicServices from "./pages/PublicServices";
+import Ministries from "./pages/Ministries";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/laws-policies" element={<LawsPolicies />} />
             <Route path="/recruitment" element={<Recruitment />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/public-services" element={<PublicServices />} />
+            <Route path="/ministries" element={<Ministries />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

@@ -44,6 +44,132 @@ export type Database = {
         }
         Relationships: []
       }
+      ministries: {
+        Row: {
+          created_at: string
+          description: string
+          discord_id: string | null
+          discord_username: string | null
+          icon: string
+          id: string
+          minister_name: string | null
+          name: string
+          roblox_id: string | null
+          roblox_username: string | null
+          sort_order: number
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          discord_id?: string | null
+          discord_username?: string | null
+          icon?: string
+          id?: string
+          minister_name?: string | null
+          name: string
+          roblox_id?: string | null
+          roblox_username?: string | null
+          sort_order?: number
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          discord_id?: string | null
+          discord_username?: string | null
+          icon?: string
+          id?: string
+          minister_name?: string | null
+          name?: string
+          roblox_id?: string | null
+          roblox_username?: string | null
+          sort_order?: number
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      news: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          status: string
+          summary: string
+          tag: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content?: string
+          created_at?: string
+          id?: string
+          status?: string
+          summary: string
+          tag?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          status?: string
+          summary?: string
+          tag?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      public_services: {
+        Row: {
+          created_at: string
+          description: string
+          featured_description: string | null
+          featured_label: string | null
+          icon: string
+          id: string
+          is_featured: boolean
+          link: string | null
+          sort_order: number
+          status: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          featured_description?: string | null
+          featured_label?: string | null
+          icon?: string
+          id?: string
+          is_featured?: boolean
+          link?: string | null
+          sort_order?: number
+          status?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          featured_description?: string | null
+          featured_label?: string | null
+          icon?: string
+          id?: string
+          is_featured?: boolean
+          link?: string | null
+          sort_order?: number
+          status?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       recruitment_posts: {
         Row: {
           created_at: string
