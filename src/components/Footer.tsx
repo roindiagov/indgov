@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Citizen Portal</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Recruitment</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">E-Court</a></li>
+              <li><a href="/laws-policies" className="hover:text-primary-foreground transition-colors">Laws & Policies</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Grievance Redressal</a></li>
             </ul>
           </div>

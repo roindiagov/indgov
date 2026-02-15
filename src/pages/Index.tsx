@@ -1,5 +1,6 @@
 import TopNavbar from "@/components/TopNavbar";
 import HeroSection from "@/components/HeroSection";
+import QuickStats from "@/components/QuickStats";
 import PopularServices from "@/components/PopularServices";
 import LatestNews from "@/components/LatestNews";
 import MinistriesSection from "@/components/MinistriesSection";
@@ -11,6 +12,7 @@ const Index = () => {
       <TopNavbar />
       <main className="flex-1">
         <HeroSection />
+        <QuickStats />
         <PopularServices />
         <div className="gov-divider" />
         <LatestNews />

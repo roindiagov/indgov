@@ -13,6 +13,7 @@ import Recruitment from "./pages/Recruitment";
 import News from "./pages/News";
 import PublicServices from "./pages/PublicServices";
 import Ministries from "./pages/Ministries";
+import SearchResults from "./pages/SearchResults";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/news" element={<News />} />
             <Route path="/public-services" element={<PublicServices />} />
             <Route path="/ministries" element={<Ministries />} />
+            <Route path="/search" element={<SearchResults />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
