@@ -8,7 +8,6 @@ import LatestNews from "@/components/LatestNews";
 import RecentActivity from "@/components/RecentActivity";
 import MinistriesSection from "@/components/MinistriesSection";
 import AboutSection from "@/components/AboutSection";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -29,7 +28,6 @@ const Index = () => {
         <div className="gov-divider" />
         <AboutSection />
       </main>
-      <Footer />
     </div>
   );
 };
