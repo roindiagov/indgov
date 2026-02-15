@@ -11,7 +11,7 @@ const AdminLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [mode, setMode] = useState<"login" | "signup">("login");
+  const [mode] = useState<"login">("login");
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,25 +28,6 @@ const AdminLogin = () => {
     setLoading(false);
   };
 
-  const handleSignup = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setMessage(null);
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { emailRedirectTo: window.location.origin },
-    });
-
-    if (error) {
-      setError(error.message);
-    } else {
-      setMessage("Check your email for a verification link before signing in.");
-    }
-    setLoading(false);
-  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -81,7 +62,7 @@ const AdminLogin = () => {
               </div>
             )}
 
-            <form onSubmit={mode === "login" ? handleLogin : handleSignup} className="space-y-4">
+            <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1">Email Address</label>
                 <div className="relative">
@@ -116,27 +97,10 @@ const AdminLogin = () => {
                 disabled={loading}
                 className="w-full py-2.5 bg-primary text-primary-foreground font-semibold rounded hover:bg-gov-green-light transition-colors disabled:opacity-50"
               >
-                {loading ? "Please wait..." : mode === "login" ? "Sign In" : "Register"}
+                {loading ? "Please wait..." : "Sign In"}
               </button>
             </form>
 
-            <div className="mt-4 text-center text-sm text-muted-foreground">
-              {mode === "login" ? (
-                <p>
-                  Need an account?{" "}
-                  <button onClick={() => { setMode("signup"); setError(null); setMessage(null); }} className="text-primary font-medium hover:underline">
-                    Register
-                  </button>
-                </p>
-              ) : (
-                <p>
-                  Already registered?{" "}
-                  <button onClick={() => { setMode("login"); setError(null); setMessage(null); }} className="text-primary font-medium hover:underline">
-                    Sign In
-                  </button>
-                </p>
-              )}
-            </div>
           </div>
 
           <div className="mt-6 text-center">

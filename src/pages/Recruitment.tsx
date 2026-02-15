@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import TopNavbar from "@/components/TopNavbar";
-import Footer from "@/components/Footer";
 import { Briefcase, Search, Users, Calendar, MapPin } from "lucide-react";
 
 interface RecruitmentPost {
@@ -113,7 +112,6 @@ const Recruitment = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

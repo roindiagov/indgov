@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import TopNavbar from "@/components/TopNavbar";
-import Footer from "@/components/Footer";
 import { Shield, Landmark, IndianRupee, Globe, Users, Gavel, Building2, Search, ArrowRight, type LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -139,7 +138,6 @@ const Ministries = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

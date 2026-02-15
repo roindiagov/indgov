@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { Search, ArrowRight, CalendarDays } from "lucide-react";
 import TopNavbar from "@/components/TopNavbar";
-import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
 
 interface SearchResult {
@@ -97,7 +96,6 @@ const SearchResults = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
