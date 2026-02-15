@@ -1,7 +1,19 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
+
   return (
     <section className="relative overflow-hidden">
       {/* Background image with overlay */}
@@ -23,19 +35,21 @@ const HeroSection = () => {
           </p>
 
           {/* Search bar */}
-          <div className="flex max-w-lg">
+          <form onSubmit={handleSearch} className="flex max-w-lg">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
               <input
                 type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search for services, departments, laws..."
                 className="w-full pl-10 pr-4 py-3 rounded-l-md bg-card text-foreground text-sm border-0 outline-none focus:ring-2 focus:ring-gov-gold"
               />
             </div>
-            <button className="px-6 py-3 bg-gov-orange text-primary-foreground font-semibold text-sm rounded-r-md hover:opacity-90 transition-opacity">
+            <button type="submit" className="px-6 py-3 bg-gov-orange text-primary-foreground font-semibold text-sm rounded-r-md hover:opacity-90 transition-opacity">
               Search
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
